@@ -4,6 +4,15 @@
 	position: relative;
 	transition: 0.5s;
 	z-index:1000;
+	display: none;
+}
+
+@media(max-width: 767px)
+{
+	.btn
+	{
+		display: block;
+	}
 }
 
 .btn::before {

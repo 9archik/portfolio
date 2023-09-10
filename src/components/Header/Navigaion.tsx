@@ -6,7 +6,7 @@ interface ILink {
 	text: string;
 }
 
-const Links: ILink[] = [
+export const Links: ILink[] = [
 	{ href: '/', text: 'Главная' },
 	{ href: '/about', text: 'Обо мне' },
 	{ href: '/portfolio', text: 'Портфолио' },
@@ -19,13 +19,13 @@ const Navigation = () => {
 			{Links.map((el) => {
 				if (el.href === pathname) {
 					return (
-						<Link className='text-blue-600' key={el.href} href={el.href}>
+						<Link className='text-blue-600 hidden md:block' key={el.href} href={el.href}>
 							{el.text}
 						</Link>
 					);
 				} else {
 					return (
-						<Link key={el.href} href={el.href}>
+						<Link className='hidden md:block' key={el.href} href={el.href}>
 							{el.text}
 						</Link>
 					);

@@ -26,7 +26,9 @@ const Header = () => {
 					<Image layout="fixed" color="#d1d1d1" width={24} height={24} src={github} alt="" />
 				</a>
 			</div>
-			<div className="flex gap-5 text-gray-300">{width > 767 ? <Navigation /> : <button onClick={() => setActive(!active)} className={`${styles.btn} ${active && styles.active}`}></button>}</div>
+			<div className="flex gap-5 text-gray-300">{<>
+			<Navigation /> <button onClick={() => setActive(!active)} className={`${styles.btn} ${active && styles.active}`}></button>
+			</>}</div>
 		</header>
 
 		{
