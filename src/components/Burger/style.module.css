@@ -1,0 +1,11 @@
+.burger
+{
+    transform: translateX(100%);
+    transition: 0.5s;
+    z-index:100;
+}
+
+.burger.active
+{
+    transform: translateX(0);
+}
