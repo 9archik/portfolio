@@ -7,11 +7,11 @@ const Skills = () => {
 			<ul className="flex flex-col py-3 px-5 border-[1px] border-solid border-slate-700 items-center text-xl text-gray-200 rounded-2xl">
 				<li>Html</li>
 				<li>Css</li>
-				<li>Javascript</li>
-				<li>Typescript</li>
-				<li>React</li>
-				<li>SASS, SCSS</li>
+				<li>Javascript, Typescript</li>
+				<li>React, NextJS</li>
+				<li>SCSS</li>
 				<li>Tailwind, Bootstrap</li>
+			
 			</ul>
 		</>
 	);
