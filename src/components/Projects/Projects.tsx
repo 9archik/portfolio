@@ -1,14 +1,4 @@
 import { IProps } from './Work/Work';
-import feplex from '../../assets/images/feplex.png';
-import chester from '../../assets/images/chester.png';
-import reshbank from '../../assets/images/reshbank.png';
-import tgWEBAPP from '../../assets/images/skuter.png';
-import blog from '../../assets/images/blog.png';
-import converter from '../../assets/images/converter.png';
-import pomodoro from '../../assets/images/pomodoro.png';
-import covid from '../../assets/images/covid.png';
-import marketData from '../../assets/images/marketData.png';
-import partnersPng from '../../assets/images/partners.png';
 import Work from './Work/Work';
 import { cache } from 'react';
 import Form from '../Form/Form';
@@ -44,7 +34,10 @@ type getProjectsFunc = () => Promise<IFetchData | IServerError>;
 const getAllProjects: getProjectsFunc = async () => {
 	try {
 		const data = await fetch('http://www.cr54355.tw1.ru/api/projects/', {
-			cache: 'no-store',
+			cache: 'default',
+			next: {
+				revalidate: 3600,
+			},
 		});
 
 		const projects: IFetchData = await data.json();
@@ -60,7 +53,7 @@ const getAllProjects: getProjectsFunc = async () => {
 const Projects = async () => {
 	const projects = await getAllProjects();
 
-	console.log(projects)
+	console.log(projects);
 
 	if ('serverError' in projects && projects?.serverError) {
 		return (
