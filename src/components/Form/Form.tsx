@@ -26,7 +26,7 @@ const Form = () => {
 			setEmailAlert(true);
 		} else {
 			setSending(true);
-			fetch('http://www.cr54355.tw1.ru/api/message/', {
+			fetch('https://cr54355.tw1.ru/api/message/', {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json',
